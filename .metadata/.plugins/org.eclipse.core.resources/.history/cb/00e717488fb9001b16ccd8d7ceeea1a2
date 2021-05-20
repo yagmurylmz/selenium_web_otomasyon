@@ -1,0 +1,47 @@
+package day1;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstScript {
+	
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\yagmur\\Desktop\\newchrome\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        
+        String url="https://www.gittigidiyor.com/";
+        driver.get(url);   
+        
+        driver.manage().window().maximize();
+        
+        Thread.sleep(2000);
+        // System.out.println(driver.getTitle());
+      //  driver.quit();
+        
+       // driver.findElement(By.className("gekhq4-4 egoSnI")).click();
+        
+       // driver.findElement(By.className("gekhq4-6 hnYHyk")).click();
+        
+      //  driver.findElement((By) By.name("kullanici")).sendKeys("yagmur");
+        
+        
+        /* Arama kutusunda 'Bilgisayar' ifadesinin aranması */
+        
+        WebElement search = driver.findElement(By.className("sc-4995aq-0 sc-14oyvky-0 gHqOYK"));
+        search.click();
+        search.sendKeys("Bilgisayar");
+        driver.findElement(By.className("qjixn8-0 sc-1bydi5r-0 hKfdXF")).click();
+        
+        driver.quit();
+	}
+	
+	
+
+}

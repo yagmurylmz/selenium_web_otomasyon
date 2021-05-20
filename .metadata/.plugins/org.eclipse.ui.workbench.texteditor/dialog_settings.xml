@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="   WebElement search = driver.findElement(By.className(&quot;sc-4995aq-0 sc-14oyvky-0 gHqOYK&quot;));"/>
+		<list key="findhistory">
+			<item value="   WebElement search = driver.findElement(By.className(&quot;sc-4995aq-0 sc-14oyvky-0 gHqOYK&quot;));"/>
+			<item value=" "/>
+			<item value="  &lt;!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core --&gt;"/>
+		</list>
+	</section>
+</section>

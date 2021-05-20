@@ -1,0 +1,52 @@
+package Tests;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+//import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class FirstTest {
+	
+	public WebDriver driver;
+	
+	@Before
+	public void loginTest() throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\yagmur\\Desktop\\newchrome\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+       
+        driver.get("https://www.gittigidiyor.com/");
+        
+        driver.manage().window().maximize();
+        
+        Thread.sleep(2000);
+        
+       
+      
+	}
+	
+	@Test
+	public void searchTest() {
+		
+        /* Arama kutusunda 'Bilgisayar' ifadesinin aranması */
+        
+        WebElement search = driver.findElement(By.className("sc-4995aq-0 sc-14oyvky-0 gHqOYK"));
+        search.click();
+        search.sendKeys("Bilgisayar");
+        driver.findElement(By.className("qjixn8-0 sc-1bydi5r-0 hKfdXF")).click();
+		
+	}
+	
+	@After
+	public void closee() {
+		
+		driver.quit();
+	}
+
+
+}

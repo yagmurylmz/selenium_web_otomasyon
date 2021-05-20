@@ -1,0 +1,40 @@
+package Tests;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.WebElement;
+
+public class SecondTest {
+	
+   
+	Actions action;
+
+	public SecondTest(WebDriver driver) {
+	action = new Actions(driver);
+	}
+
+	public void pressEnter() {
+	action.sendKeys(Keys.ENTER).build().perform();
+	}
+
+	public static void main(String[] args){
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\yagmur\\Desktop\\newchrome\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+	SecondTest objSearch = new SecondTest(driver);
+	
+	driver.get("https://www.gittigidiyor.com/");
+	driver.manage().window().maximize();
+	WebElement inputSearch = driver.findElement(By.xpath("//*[@id=\"main-header\"]/div[3]/div/div/div/div[2]/form/div/div[1]/div[2]/input"));
+	inputSearch.sendKeys("Bilgisayar");
+	objSearch.pressEnter();
+	
+	driver.findElement(By.xpath("//*[@id=\"best-match-right\"]/div[5]/ul/li[2]/a"));
+	driver.findElement(By.xpath("//*[@id=\\\"best-match-right\\\"]/div[6]/div[3]/a"));
+	objSearch.pressEnter();   
+	}  
+  }

@@ -1,0 +1,28 @@
+package day1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstScript {
+	
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\yagmur\\Desktop\\newchrome\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.gittigidiyor.com/");
+        Thread.sleep(4000);
+        // System.out.println(driver.getTitle());
+      //  driver.quit();
+        
+        driver.findElement(By.className("gekhq4-4.egoSnI"));
+        
+        driver.findElement(By.className("gekhq4-6 hnYHyk")).click();
+        
+      //  driver.findElement((By) By.name("kullanici")).sendKeys("yagmur");
+        
+	}
+
+}
